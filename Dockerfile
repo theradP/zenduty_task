@@ -22,5 +22,6 @@ COPY . .
 
 
 # Run the application
-CMD ["sh", "/app/entrypoint.sh"]
+CMD python manage.py migrate && python manage.py runserver
+#CMD ["sh", "/app/entrypoint.sh"]
 
